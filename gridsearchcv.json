@@ -1,0 +1,9 @@
+{
+ "LogisticRegression" : {"cv": 5},
+ "SVC" : {"cv": 5},
+ "RandomForestClassifier" : {"cv": 5},
+ "KNeighborsClassifier" : {"cv": 5},
+ "GaussianNB" : {"cv": 5},
+ "AdaBoostClassifier" : {"cv": 5},
+ "XGBClassifier" : {"cv": 5}
+}
