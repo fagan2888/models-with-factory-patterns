@@ -27,3 +27,13 @@ class Director(metaclass=abc.ABCMeta):
         self._X_test = x_test
         self._y_test = y_test
 
+    def fit_all(self):
+        for model in self._models:
+            print('-' * 20 + model + '-' * 20)
+            print(self._models[model].fit(self._X_train, self._y_train))
+
+    def run(self, x_train, x_test, y_train, y_test):
+        self.build_models()
+        self.set_data(x_train, x_test, y_train, y_test)
+        self.fit_all()
+
