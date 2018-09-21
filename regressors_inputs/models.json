@@ -1,0 +1,7 @@
+{
+  "LinearRegression" : {"penalty": [ "l1", "l2"]},
+  "LassoCV" : {},
+  "Lasso" : {"max_depth": [2,3,4]},
+  "ElasticNetCV" : {"n_neighbors": [3,4,5]},
+  "ElasticNet" : {"n_neighbors": [3,4,5]}
+}

@@ -1,0 +1,9 @@
+{
+ "LogisticRegression" : {"cv": 5, "scoring" : "roc_auc"},
+ "SVC" : {"cv": 5, "scoring" : "roc_auc"},
+ "RandomForestClassifier" : {"cv": 5, "scoring" : "roc_auc"},
+ "KNeighborsClassifier" : {"cv": 5, "scoring" : "roc_auc"},
+ "GaussianNB" : {"cv": 5, "scoring" : "roc_auc"},
+ "AdaBoostClassifier" : {"cv": 5, "scoring" : "roc_auc"},
+ "XGBClassifier" : {"cv": 5, "scoring" : "roc_auc"}
+}

@@ -1,0 +1,11 @@
+{
+  "LogisticRegression" : {"penalty": [ "l1", "l2"]},
+  "SVC" : {},
+  "RandomForestClassifier" : {"max_depth": [2,3,4]},
+  "KNeighborsClassifier" : {"n_neighbors": [3,4,5]},
+  "GaussianNB" : {},
+  "AdaBoostClassifier" : {"algorithm" : ["SAMME", "SAMME.R"]},
+  "XGBClassifier" : {"max_depth" : [3,4,5,6,7],
+                    "gamma" : [0.0, 0.1, 0.2],
+                    "reg_alpha" : [1e-5, 1e-2, 0.1, 1, 100]}
+}

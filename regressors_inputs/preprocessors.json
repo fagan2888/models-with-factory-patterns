@@ -1,0 +1,5 @@
+{
+  "standard_scaler" : {"parameters": {}, "columns" : ["R&D Spend", "Administration", "Marketing Spend"]},
+  "target_variable" : {"parameters": {}, "columns" : "Profit"},
+  "get_dummies": {"parameters": {"drop_first" : true}, "columns" : ["State"]}
+}
