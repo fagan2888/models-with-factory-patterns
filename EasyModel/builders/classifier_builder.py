@@ -6,6 +6,10 @@ import pandas as pd
 from sklearn.metrics import precision_recall_curve
 from sklearn.preprocessing import label_binarize
 import matplotlib.pyplot as plt
+import eli5
+from eli5.sklearn import PermutationImportance
+from IPython.display import display
+from pdpbox import pdp, get_dataset, info_plots
 
 
 class EasyClassifiers(AbsModelBuilder):
@@ -72,3 +76,23 @@ class EasyClassifiers(AbsModelBuilder):
                 y_scores = self._models[model].predict_proba(self._X_test)[:, target_col]
                 p, r, thresholds = precision_recall_curve(y_test_roc, y_scores)
                 plot_precision_recall_vs_threshold(p, r, thresholds, model)
+            else:
+                print(model + " does not support 'predict_proba' function")
+
+    def permutation_importance(self):
+        for model in self._models:
+            if model != "XGBClassifier":
+                perm = PermutationImportance(self._models[model], random_state=1).fit(self._X_test, self._y_test)
+                print('-' * 20 + model + '-' * 20)
+                display(eli5.show_weights(perm, feature_names=self._X_test.columns.tolist()))
+            else:
+                print(model + " is incompatible with eli5's PermutationImportance")
+
+    def partial_dependence_plot(self, feature):
+        for model in self._models:
+            # Create the data that we will plot
+            pdp_goals = pdp.pdp_isolate(model=self._models[model], dataset=self._X_test,
+                                        model_features=self._X_test.columns.tolist(), feature=feature)
+            # plot it
+            pdp.pdp_plot(pdp_goals, model + "'s " + feature)
+            plt.show()
