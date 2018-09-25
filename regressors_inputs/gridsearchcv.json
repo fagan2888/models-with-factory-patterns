@@ -1,9 +1,12 @@
 {
- "LogisticRegression" : {"cv": 5, "scoring" : "roc_auc"},
- "SVC" : {"cv": 5, "scoring" : "roc_auc"},
- "RandomForestClassifier" : {"cv": 5, "scoring" : "roc_auc"},
- "KNeighborsClassifier" : {"cv": 5, "scoring" : "roc_auc"},
- "GaussianNB" : {"cv": 5, "scoring" : "roc_auc"},
- "AdaBoostClassifier" : {"cv": 5, "scoring" : "roc_auc"},
- "XGBClassifier" : {"cv": 5, "scoring" : "roc_auc"}
+ "LinearRegression" : {"cv": 5, "scoring" : "r2"},
+ "Lasso" : {"cv": 5, "scoring" : "r2"},
+ "ElasticNet" : {"cv": 5, "scoring" : "r2"},
+ "Ridge": {"cv": 5, "scoring" : "r2"},
+ "KNeighborsRegressor" : {"cv": 5, "scoring" : "r2"},
+ "SGDRegressor": {"cv": 5, "scoring" : "r2"},
+ "RandomForestRegressor": {"cv": 5, "scoring" : "r2"},
+ "DecisionTreeRegressor": {"cv": 5, "scoring" : "r2"},
+ "AdaBoostRegressor": {"cv": 5, "scoring" : "r2"},
+ "BayesianRidge": {"cv": 5, "scoring" : "r2"}
 }

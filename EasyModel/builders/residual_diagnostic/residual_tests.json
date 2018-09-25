@@ -1,0 +1,5 @@
+{
+  "shapiro" : {},
+  "acorr_ljungbox": {"lags": 1},
+  "het_goldfeldquandt":{}
+}

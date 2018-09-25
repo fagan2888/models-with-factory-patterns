@@ -36,3 +36,7 @@ class AbsModelBuilder(metaclass=abc.ABCMeta):
         self.build_models()
         self.set_data(x_train, x_test, y_train, y_test)
         self.fit_all()
+
+    def score_reports(self):
+        for model in self._models:
+            print(model + ": " + str(self._models[model].best_score_))

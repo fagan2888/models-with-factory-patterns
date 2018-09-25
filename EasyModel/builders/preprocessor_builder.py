@@ -12,7 +12,7 @@ class EasyPreprocessors(AbsPreprocessorBuilder):
             if "target_variable" == entry:
                 print("computing target_variable")
                 self._y = self._X[self._preprocessors_info["target_variable"]["columns"]]
-                self._X.drop([self._preprocessors_info["target_variable"]["columns"]], axis=1, inplace=True)
+                self._X.drop([self._preprocessors_info["target_variable"]["columns"][0]], axis=1, inplace=True)
 
             else:
                 preprocessor = load_preprocessor(entry, self._preprocessors_info[entry]["parameters"])

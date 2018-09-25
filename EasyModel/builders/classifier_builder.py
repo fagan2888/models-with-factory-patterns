@@ -26,10 +26,6 @@ class EasyClassifiers(AbsModelBuilder):
             print('-'*20  + model + '-'*20)
             print(classification_report(self._y_test, self._models[model].predict(self._X_test)))
 
-    def score_reports(self):
-        for model in self._models:
-            print(model + ": " + str(self._models[model].best_score_))
-
     def feature_inspect(self, max_feature=10):
         for model in self._models:
             if hasattr(self._models[model].best_estimator_, 'feature_importances_'):

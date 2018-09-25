@@ -1,7 +1,12 @@
 {
-  "LinearRegression" : {"penalty": [ "l1", "l2"]},
-  "LassoCV" : {},
-  "Lasso" : {"max_depth": [2,3,4]},
-  "ElasticNetCV" : {"n_neighbors": [3,4,5]},
-  "ElasticNet" : {"n_neighbors": [3,4,5]}
+  "LinearRegression" : {} ,
+  "Lasso" :  {"alpha": [1, 793.1359903974512] },
+  "ElasticNet" : {"alpha": [1, 81.1122337913246]},
+  "Ridge": {"alpha": [0.01, 0.1, 1, 10, 100]},
+  "KNeighborsRegressor": {"n_neighbors":[2,3,4]},
+  "SGDRegressor": {},
+  "RandomForestRegressor": {"max_depth": [2,3,4], "random_state": [0]},
+  "DecisionTreeRegressor": {"max_depth": [2,3,4]},
+  "AdaBoostRegressor": {"n_estimators" :[200,300]},
+  "BayesianRidge": {}
 }
