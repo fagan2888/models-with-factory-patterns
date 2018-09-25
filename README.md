@@ -1,2 +1,2 @@
 # models with factory pattern
-This is a demo on using factory pattern on multiple models. Currently, only classification models with classification report, feature inspection, score, and decision threshold inspection are implemented. Basic preprocessors such as get_dummies, standard_scaler are also implemented.
+This is a demo on using factory pattern on multiple models. Currently, 1) classification models with classification report, feature inspection, score, and decision threshold inspection are implemented. 2) Regressors with VIF and residual checks(normal distribution, autocorrelation, constand variance)  Basic preprocessors such as get_dummies, standard_scaler are also implemented.
