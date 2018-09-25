@@ -1,6 +1,0 @@
-{
-  "standard_scaler" : {"parameters": {}, "columns" : ["EstimatedSalary", "Age"]},
-  "drop_columns" : {"parameters": {}, "columns" : ["User ID"]},
-  "target_variable" : {"parameters": {}, "columns" : "Purchased"},
-  "get_dummies": {"parameters": {"drop_first" : true}, "columns" : ["Gender"]}
-}
