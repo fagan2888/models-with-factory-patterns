@@ -1,16 +1,16 @@
+from xgboost import XGBRegressor
 from EasyModel.factories.abs_model_factory import AbsModelFactory
-from sklearn.linear_model import Lasso
 from sklearn.model_selection import GridSearchCV
 
 
-class LassoFactory(AbsModelFactory):
+class XGBRegressorFactory(AbsModelFactory):
     """The factory class that creates the model with grid search.
 
-    For more info, please visit http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso
+    For more info, please visit https://xgboost.readthedocs.io/en/latest/python/python_api.html
                                 http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
 
     Attributes:
-        _reg: stores the model sklearn.linear_model.Lasso
+        _reg: stores the model xgboost.XGBRegressor
     """
 
     def create_model(self, tuned_parameters, grid_search_parameters):
@@ -24,5 +24,5 @@ class LassoFactory(AbsModelFactory):
             returns the created model(in GridSearchCV type)
         """
 
-        self._reg = reg = GridSearchCV(Lasso(), tuned_parameters, **grid_search_parameters)
+        self._reg = reg = GridSearchCV(XGBRegressor(), tuned_parameters, **grid_search_parameters)
         return reg
